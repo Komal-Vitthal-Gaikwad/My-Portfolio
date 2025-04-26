@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" type="image/png" href="kg-mylogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family:Lato;
+            color: #323232;           
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            background-color: #f5f6fa;
+        }        
+        #main-heading{
+            display: flex;
+            margin:50px;
+        }
+        #head-img{
+            height:40px;
+            margin-right: 25px;
+        }
+        #name{
+            border-top: 3px solid #f5f6fa;            
+        }     
+        #name a{
+            text-decoration: none;
+            color:#323232;
+            font-size: 30px;
+            font-weight: lighter;            
+        }
+        #name:hover{
+            border-top: 3px solid #B4E1D2;
+            cursor:pointer;
+        }
+        #main-navbar{
+            position:absolute;
+            right:auto;
+            left:85%;
+            display:flex;
+            transform: translateX(-50%);
+            justify-content: space-between;
+            padding:0 10px;
+            gap:30px;
+            height:40px;
+        }
+        #main-navbar > a{
+            text-decoration: none;
+            color:#808080;
+            font-size: 18px;
+            padding:0;
+            border-bottom:3px solid #f5f6fa ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+        }
+        #main-navbar > a:hover{
+            color: black;
+            border-bottom:3px solid #D3825a ;
+        }
+        #main-navbar > a.active{
+            border-bottom:3px solid #D3825a;
+            color:black;
+        }
+        #hello{
+            margin-top:100px;
+            animation: fadeIn 2s forwards;            
+        }        
+        p{
+            color: black;
+            font-family:'Times New Roman', Times, serif;
+        }
+        #hello, #world, #intro{
+            padding: 0;
+            padding-left: 70px;
+        }
+        #container{
+            white-space: nowrap;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: left;
+            flex-direction: column;
+        }
+        #hello, #world{
+            font-size: 1100%;
+            display: inline-block;
+            overflow: hidden;
+            opacity:0;
+            line-height: 1;
+        }
+        #world{
+            animation: fadeIn2 2s forwards 2s;
+            height:180px;
+        }
+        @keyframes fadeIn{
+            0%{
+                opacity:0;
+                transform: translateY(50px);
+            }
+            100%{
+                opacity: 1;
+                transform: translate(0);
+            }
+        }
+        @keyframes fadeIn2{
+            0%{
+                opacity:0;
+                transform: translateY(-50px);
+            }
+            100%{
+                opacity: 1;
+                transform: translate(0);
+            }
+        }
+        #world p{
+            font-weight: bold;
+        }
+        #intro{
+            height:150px;
+        }
+        #intro p{
+            font-size: 25px;
+            color: #323232;
+            font-family: Lato;
+        }
+        #social-media{
+            width:100%;
+            background-color: #D3825a;
+            height:30vh;
+        }
+        #center-data{
+            display: flex;
+            justify-content: center;
+            align-items: left;
+            height:30vh;
+            flex-direction: column;
+            gap:20px;
+            padding-left: 10%;
+        }        
+        #acc > a{
+            color: #f5f6fa;
+            font-size:x-large;
+            padding:0 5px ;
+        }
+        #location{
+            color: #323232;
+            font-size: large;
+        }
+        #acc > a:hover{
+            color:#B4E1D2;
+        }
+        @media (max-width:700px) and (min-width:300px) {
+            #head-img{
+                width:45px;
+            }
+            #main-navbar{
+                top:15%;
+                display: flex;
+                justify-content: center;
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+            }
+            #hello, #world{
+                font-size: 600%;
+                height:100px;
+                padding-left: 30px;
+            }
+            #hello{
+                margin-top: 80px;
+            }
+            #world{
+                margin-bottom: 20px;
+            }
+            #intro{
+                padding-left: 30px;
+                margin-bottom: -50px;
+            }
+            #intro p{
+                font-size: 20px;               
+            }
+            #acc > a{
+                font-size: large;
+            }
+            #location{
+                font-size:medium;
+                padding-left: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="main-heading">
+        <img src="head-logo.png" alt="kg-logo" id="head-img">
+        <h1 id = "name"><a href="index.html" >Komal Gaikwad</a></h1>
+        <nav id = "main-navbar">
+            <a href="index.html">Home</a>
+            <a href="project.html">Project</a>
+            <a href="about.html">About</a>
+        </nav>
+    </div>
+    <div id="container">
+        <div id="hello"><p>Hello,</p></div>
+        <div id="world"><p>World.</p></div>
+    </div>
+    <div id="intro"><p>👋 My name is Komal. I'm a <br>Computer Engineering Student and it's very <br>nice to meet you.</p></div>
+
+    <div id="social-media">
+        <div id="center-data">
+            <div id="acc">
+                <a href="https://github.com/Komal-Vitthal-Gaikwad/" target="_blank">Github</a>
+                <a href="https://www.instagram.com/_komal.2902?igsh=MWJ5cTN5OHU1eGk4eA==" target="_blank">Instagram</a>
+                <a href="https://www.linkedin.com/in/komal-gaikwad-239880350" target="_blank">LinkedIn</a>
+                <a href="">Resume</a>
+            </div>
+            <p id="location">Pune, Maharashtra, India</p>
+        </div>
+    </div>
+    <script>
+        const links = document.querySelectorAll('a');
+        const currentPage = window.location.href;
+        links.forEach(link => {
+            if (link.href === currentPage) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>
