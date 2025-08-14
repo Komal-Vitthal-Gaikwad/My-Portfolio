@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" type="image/png" href="kg-mylogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-heading">
+        <div class="logo">
+            <img src="head-logo.png" alt="">
+        </div>
+        <div class="nav-bar">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+    <div id="container">
+        <div id="hello"><p>Hello,</p></div>
+        <div id="world"><p>World.</p></div>
+    </div>
+    <div id="intro"><p>👋 My name is Komal. It's very <br>nice to meet you.</p></div>
+    
+        <div id="about">
+            <div id="about-this">
+                <div class="img-div">
+                    <img src="myphoto.jpg" alt="">
+                </div>            
+                <div class="intro">
+                    <p style="padding-bottom: 0.4em;"><b>About Me</b></p>
+                    <p style="padding-bottom: 0.4em;">I’m Komal Vitthal Gaikwad, <br>a final-year Computer Engineering student passionate about coding, problem-solving, and creating impactful digital solutions. I believe in improving myself every day, blending creativity with technical skills to build projects that matter.</p>
+                    <a href="https://drive.google.com/file/d/1SBouaFF7AsoRsAhKvbWsuc9Ybuimudww/view?usp=drivesdk" style=" font-size: 1em;" target="_blank"><b>Resume</b></a>
+                </div>            
+            </div>
+        </div>
+       
+
+        <div id="projects">
+            <div class="main-div">
+                <div class="div1-text">
+                    <div class="div1">
+                        <img src="Project1-img.png" alt="" >
+                    </div>
+                    <a href="https://github.com/Komal-Vitthal-Gaikwad/Hangman-game.git">Hangman Game</a>
+                </div>
+                <div class="div2-text">
+                    <div class="div2">
+                        <img src="Project2-img.jpg" alt="">
+                    </div>
+                    <a href="https://github.com/Komal-Vitthal-Gaikwad/TODO-List.git">ToDo List</a>
+                </div>
+                <div class="div3-text">
+                    <div class="div3">
+                        <img src="Project3-img.jpg" alt="">
+                    </div>
+                    <a href="https://github.com/Komal-Vitthal-Gaikwad/Gobal-Restaurant-Analysis.git">Resturant Analysis</a>
+                </div>
+            </div>
+        </div>
+       
+        <div id="contact">
+            <div class="inner-contact">
+                <div class="git">
+                    
+                    <a href="https://github.com/Komal-Vitthal-Gaikwad" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <div class="lden">
+                                        
+                    <a href="https://www.linkedin.com/in/komal-gaikwad-239880350" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="mail">
+                    
+                    <a href="gaikwadkml292@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; padding: 15px; background-color: #f8f8f8; font-size: 14px; color: #555;">&copy; 2025 Komal Gaikwad. All Rights Reserved.</div>
+
+    <script>
+        const links = document.querySelectorAll('a[href^="#"]'); // only same-page links
+
+        function setActiveLink() {
+            links.forEach(link => link.classList.remove('active')); // remove active from all
+            const currentHash = window.location.hash;
+            if (currentHash) {
+                const activeLink = document.querySelector(`a[href="${currentHash}"]`);
+                if (activeLink) activeLink.classList.add('active');
+            }
+        }
+
+        setActiveLink();
+
+        window.addEventListener('hashchange', setActiveLink);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,530 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:Lato;
+    color: #323232;           
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #f5f6fa;
+}        
+.main-heading{
+    width:100%;
+    height:5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:1.5em;
+    align-items: center;
+    position: sticky;
+    top:0;
+    background-color: #f5f6fa;
+    z-index: 10;
+}
+.main-heading .logo img{
+    height:3em;
+    padding-left:2em;
+}
+.main-heading .nav-bar{
+    display: flex;
+    gap:1em;
+    padding-right: 3em;
+}
+.main-heading .nav-bar a{
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: Lato;
+}
+p{
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+}
+a.active{
+    border-bottom: 3px solid #323232; 
+    padding-bottom: 2px;
+}
+#hello, #world, #intro{
+    padding: 0;
+    padding-left: 70px;
+}
+#container{
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+}
+#hello, #world{
+    font-size: 12em;
+    display: inline-block;
+    overflow: hidden;
+    opacity:0;
+    line-height: 1;
+}
+#hello{
+    margin-top:50px;
+    animation: fadeIn 2s forwards;            
+}  
+#world{
+    animation: fadeIn2 2s forwards 2s;
+    height:180px;
+}
+@keyframes fadeIn{
+    0%{
+        opacity:0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes fadeIn2{
+    0%{
+        opacity:0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+#world p{
+    font-weight: bold;
+}
+#intro{
+    height:9em;
+    padding-top: 1em;
+}
+#intro p{
+    font-size: 1.5em;
+    color: #323232;
+    font-family: Lato;
+}
+#projects{
+    width:99vw;
+    height:99vh;
+    padding: 11em;
+}
+.main-div{
+    height:26em;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top:3.3em;
+    padding-bottom:3.3em;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.500);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.500);
+}
+.div1-text, .div2-text, .div3-text{
+    height:20em;
+    width:23em;
+    display: flex;
+    flex-direction: column;
+}
+.div1 {
+    height:18em;
+    width:23em;
+    border:1px solid rgba(0, 0, 0, 0.500);
+    border-radius: 0.4em;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.div2{
+    height:18em;
+    width:23em;
+    border:1px solid rgba(0, 0, 0, 0.500);
+    border-radius: 0.4em;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+.div3{
+    height:18em;
+    width:23em;
+    border:1px solid rgba(0, 0, 0, 0.500);
+    border-radius: 0.4em;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+.div1:hover, .div2:hover, .div3:hover{
+    border : 1.7px solid black; 
+}
+.div1 img, .div2 img, .div3 img{
+    width:20em;
+    height:12em;
+}
+.div1-text a, .div2-text a, .div3-text a{
+    font-weight: 150;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.div1-text a:hover, .div2-text a:hover, .div3-text a:hover{
+    color:black;
+    transform: translateY(-2px);
+
+}
+.div1:hover img, .div2:hover img, .div3:hover img{
+    box-shadow: 3px 3px 5px rgb(0, 0, 0) ;
+        transform: translateY(-2px);
+}
+#about{
+    width:99vw;
+    height:99vh;
+    padding: 11em;
+    padding-bottom: 5.5em;
+}
+#about-this{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid rgba(0, 0, 0, 0.500);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.500);
+    height:26em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+#about-this .intro{
+    font-size: 1.5em;
+    text-align: left;
+    padding-right: 2em;
+    padding-top: 2em;
+        
+}
+#about-this .intro p{
+    font-family:Lato;  
+    color: #323232;  
+}
+#about-this .img-div{
+    height:20em;
+    width:20em;
+    object-fit: fill;
+    border-radius: 50%;
+}
+#about-this img{
+    height:20em;
+    width:20em;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #323232;
+}
+#contact{
+    width:99vw;
+    height:30vh;
+    padding: 11em;
+    padding-top: 0.5em;
+}
+.inner-contact{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:flex-start;
+    border-top: 1px solid rgba(0, 0, 0, 0.500);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.500);
+    height:10em;
+}
+.inner-contact i{
+    color: #323232;
+    font-size: 3em;
+}
+.inner-contact i:hover{
+     transform: translateY(-2px);
+     color: black;
+}
+.git, .lden, .mail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3em;
+}
+@media screen and (max-width:900px) and (min-width:700px) {
+    .main-heading .nav-bar{
+        padding-right: 1em;
+        font-family: Lato;
+    }
+    #hello, #world{
+        font-size: 10em;
+    }
+    #hello, #world, #intro{
+        padding: 0;
+        padding-left: 50px;
+    }
+    #intro p{
+        margin-top: -1em;
+        font-size: 1.2em;
+    }
+    #about{
+        width:99vw;
+        height:50vh;
+        padding: 5em;
+        padding-bottom: 5.5em;
+    }
+    #about-this .intro{
+        font-size: 1em;
+        text-align: left;
+        padding-right: 2em;
+        padding-top: 2em;
+            
+    }
+    #about-this .intro p{
+        font-family:Lato;  
+        color: #323232;  
+    }
+    #about-this .img-div{
+        height:15em;
+        width:15em;
+        object-fit: fill;
+        border-radius: 50%;
+    }
+    #about-this img{
+        height:15em;
+        width:15em;
+        border-radius: 50%;
+        box-shadow: 0 0 6px #323232;
+    }
+    #about-this{
+        height:20em;
+    }
+    #projects{
+        width:99vw;
+        height:100vh;
+        padding: 5em;
+        padding-top: 10em;
+        margin-bottom: 25em;
+    }
+    .main-div{
+        height:60em;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-top:1em;
+        padding-bottom:1em;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .div1-text, .div2-text, .div3-text{
+        height:17em;
+        width:18em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .div1 , .div2, .div3{
+        height:18em;
+        width:23em;
+        border:1px solid rgba(0, 0, 0, 0.500);
+        border-radius: 0.4em;
+
+    }
+    #contact{
+        width:99vw;
+        height:40vh;
+        padding: 5em;
+        padding-top: 5em;
+    }
+
+}
+
+@media screen and (max-width:700px) and (min-width:300px) {
+    #hello, #world, #intro{
+        padding: 0;
+        padding-left: 50px;
+    }
+    .main-heading .nav-bar{
+        font-family: Lato;
+        padding-right: 0em;
+    }
+    .main-heading .logo img{
+        height:2em;
+        padding-left:2em;
+    }
+    .main-heading .nav-bar a{
+        text-decoration: none;
+        font-size: 1em;
+        font-family: Lato;
+    }
+
+    #hello, #world{
+        font-size: 4em;
+    }
+    #intro p{
+        margin-top: -9em;
+        font-size: 0.8em;
+    }
+    #about{
+        width:99vw;
+        height:30vh;
+        padding: 2em;
+        padding-bottom: 5.5em;
+        padding-top: 0em;
+    }
+    #about-this .intro{
+        font-size: 0.8em;
+        text-align: center;
+        margin-top: -1em;            
+    }
+    #about-this .intro p{
+        font-family:Lato;  
+        color: #323232;  
+    }
+    #about-this .img-div{
+        height:8em;
+        width:8em;
+        object-fit: fill;
+        border-radius: 50%;
+        padding-top: 1em;
+    }
+    #about-this img{
+        height:8em;
+        width:8em;
+        border-radius: 50%;
+        box-shadow: 0 0 6px #323232;
+    }
+    #about-this{
+        height:20em;
+        display: flex;
+        flex-direction: column;
+    }
+    #projects{
+        width:99vw;
+        height:100vh;
+        padding: 2em;
+        padding-top: 10em;
+        margin-bottom: 30em;
+    }
+    .main-div{
+        height:60em;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-top:1em;
+        padding-bottom:1em;
+        align-items: center;
+        justify-content: space-around;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .div1-text, .div2-text, .div3-text{
+        height:17em;
+        width:20em;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .div1 , .div2, .div3{
+        height:13em;
+        width:18em;
+        border:1px solid rgba(0, 0, 0, 0.500);
+        border-radius: 0.4em;
+    }
+    .div1 img, .div2 img ,.div3 img{
+        height: 9em;
+        width: 16em;
+    }
+    #contact{
+        width:99vw;
+        height:5vh;
+        padding: 2em;
+        margin-bottom: 5em;
+    }
+    .inner-contact i{
+        font-size: 2.5em;
+    }
+    .inner-contact{
+        height:7em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .git, .lden, .mail{
+        padding-left: 0;
+    }
+}
+@media screen and (max-width:1400px) and (min-width:900px) {
+    #about{
+        width:99vw;
+        height:65vh;
+        padding: 5em;
+    }
+    #about-this .intro{
+        font-size: 1.3em;
+        text-align: left;
+        padding-top: 2em;
+            
+    }
+    #about-this .intro p{
+        font-family:Lato;  
+        color: #323232;  
+    }
+    #about-this .img-div{
+        height:17em;
+        width:17em;
+        object-fit: fill;
+        border-radius: 50%;
+    }
+    #about-this img{
+        height:17em;
+        width:17em;
+        border-radius: 50%;
+        box-shadow: 0 0 6px #323232;
+    }
+    #about-this{
+        height:25em;
+    
+    }
+    #projects{
+        width:99vw;
+        height:100vh;
+        padding: 5em;
+        padding-top: 10em;
+        margin-bottom: 25em;
+    }
+    .main-div{
+        height:60em;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-top:1em;
+        padding-bottom:1em;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .div1-text, .div2-text, .div3-text{
+        height:17em;
+        width:18em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .div1 , .div2, .div3{
+        height:18em;
+        width:23em;
+        border:1px solid rgba(0, 0, 0, 0.500);
+        border-radius: 0.4em;
+
+    }
+    #contact{
+        width:99vw;
+        height:40vh;
+        padding: 5em;
+        padding-top: 5em;
+    }
+}
